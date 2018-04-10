@@ -6,8 +6,8 @@
 
 ### CodeFights
 
-* [Intro 60/60](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/CodingFights_Intro_60_tasks)
-* [Databases 2/84](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/CodingFights_Databases_80_tasks)
+* [Intro 60/60](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/CodeFights_Intro_60_tasks)
+* [Databases 10/84](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/CodeFights_Databases_80_tasks)
 
 ### Sorting Algorithms
 
