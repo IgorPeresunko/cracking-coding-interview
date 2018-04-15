@@ -11,7 +11,7 @@
 
 ### Fuzzy Logic
 
-* [Membership Functions]()
+* [Membership Functions](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/Fuzzy_Logic/Membership_Functions)
 
 ### Sorting Algorithms
 
