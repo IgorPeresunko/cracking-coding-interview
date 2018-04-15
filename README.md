@@ -7,13 +7,21 @@
 ### CodeFights
 
 * [Intro 60/60](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/CodeFights_Intro_60_tasks)
-* [Databases 10/84](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/CodeFights_Databases_80_tasks)
+* [Databases 24/84](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/CodeFights_Databases_80_tasks)
+
+### Fuzzy Logic
+
+* [Membership Functions]()
 
 ### Sorting Algorithms
 
 *In progress*
 
 ### Data Structures
+
+*In progress*
+
+### Machine Learning
 
 *In progress*
 
