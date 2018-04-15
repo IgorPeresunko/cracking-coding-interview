@@ -11,7 +11,7 @@
 
 ### Fuzzy Logic
 
-* [Membership Functions](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/Fuzzy_Logic/Membership_Functions)
+* [Membership Functions](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/Fuzzy_Logic/Membership_Functions) - [Live Demo](http://igorperesunko.com/fuzzy_functions/)
 
 ### Sorting Algorithms
 
@@ -27,7 +27,7 @@
 
 ### React Web Sites Practice
 
-* [Model Agency UI](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/ReactWeb/model-agency-react-web-site)
+* [Model Agency UI](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/ReactWeb/model-agency-react-web-site) - [Live Demo](http://igorperesunko.com/works/model_agency_ui/)
 
 ### Books
 
