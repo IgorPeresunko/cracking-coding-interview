@@ -59,7 +59,7 @@ export default class MinMax extends Component {
 		const data = []
 		for (let i = 0; i < f0.length; ++i) {
 			for (let j = 0; j < f1.length; ++j) {
-				const x = operations[operation](f0[i].x, f1[j].x)
+				const x = operations[operation](f0[i].x, f1[j].x)	
 				if (data[x]) {
 					data[x] = Math.max(data[x], Math.min(f0[i].y, f1[j].y))
 				} else {

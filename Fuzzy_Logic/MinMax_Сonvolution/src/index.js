@@ -21,21 +21,43 @@ const functions = [
 			}))
 		}
 	},
-	// {
-	// 	name: 'Sigmoidal',
-	// 	inputs0: [{ name: 'a', value: 2 }, { name: 'c', value: 0 }],
-	// 	inputs1: [{ name: 'a', value: 5 }, { name: 'c', value: 2 }],
-	// 	tabulate: (steps, a, c) => {
-	// 		const min = a - 5 * c
-	// 		const max = a + 5 * c
-	// 		const step = (max - min) / steps
+	{
+		name: 'Sigmoidal',
+		inputs0: [{ name: 'a', value: 2 }, { name: 'c', value: 0 }],
+		inputs1: [{ name: 'a', value: 5 }, { name: 'c', value: 2 }],
+		tabulate: (steps, a, c) => {
+			const min = 20
+			const max = 40
+			const step = (max - min) / steps
 			
-	// 		return new Array(steps).fill(0).map((n, i) => ({
-	// 			x: min + step * i,
-	// 			y: 1 / ( 1 + Math.exp(-a * (min + step * i - c)) )
-	// 		}))
-	// 	}
-	// }
+			return new Array(steps).fill(0).map((n, i) => ({
+				x: min + step * i,
+				y: 1 / ( 1 + Math.exp(-a * (min + step * i - c)) )
+			}))
+		}
+	},
+	{
+		name: 'Triangular',
+		inputs0: [{ name: 'a1', value: -20 },{ name: 'b2', value: 0 },{ name: 'c3', value: 10 }],
+		inputs1: [{ name: 'a1', value: -20 },{ name: 'b2', value: 0 },{ name: 'c3', value: 10 }],
+		tabulate: (steps, a, b, c) => {
+			const min = 10
+			const max = 20
+			const step = (max - min) / steps
+			
+			return new Array(steps).fill(0).map((n, i) => {
+				const x = min + step * i
+				let y = 0
+				if (x <= a || x >= c)
+					y = 0
+				if (x >= a && x <= b)
+					y = (x - a) / (b - a)
+				y = (c - x) / (c - b)
+
+				return { x, y }
+			})
+		}
+	}
 ]
 
 const App = () =>
