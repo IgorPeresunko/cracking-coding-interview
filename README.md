@@ -12,6 +12,7 @@
 ### Fuzzy Logic
 
 * [Membership Functions](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/Fuzzy_Logic/Membership_Functions) - [Live Demo](http://igorperesunko.com/fuzzy_functions/)
+* [MinMax Сonvolution](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/Fuzzy_Logic/MinMax_Сonvolution) - [Live Demo](http://igorperesunko.com/fuzzy_minmax/)
 
 ### Sorting Algorithms
 
@@ -23,7 +24,8 @@
 
 ### Machine Learning
 
-*In progress*
+* [K-means clustering](https://github.com/IgorPeresunko/cracking-coding-interview/tree/master/Machine_Learning/k_means)
+
 
 ### React Web Sites Practice
 
