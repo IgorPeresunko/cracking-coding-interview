@@ -5,17 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../style.css">
 	
-	<title>Fuzzy Indexes</title>
+	<title>Fuzzy Distances</title>
 </head>
 <body>
 	<div class="wrapper">
 		<div>
 			Нечітке число А:
 			<div class="inputs">
-				<input id="a_b" type="number" value="5" />
-				<input id="a_d" type="number" value="1" />
+				<input id="c1" type="number" value="3" />
+				<input id="b1" type="number" value="7" />
+			</div>
+		</div>
+		<div>
+			Нечітке число B:
+			<div class="inputs">
+				<input id="c2" type="number" value="6" />
+				<input id="b2" type="number" value="17" />
 			</div>
 		</div>
 
@@ -27,9 +34,16 @@
 		</div>
 
 		<div>
-			Ентропія за нечіткістю:
+			Лінійна Хемінгова
 			<div class="inputs">
-				<input id="h" type="number" value="" readonly="1" />
+				<input id="roH" type="number" value="" readonly="1" />
+			</div>
+		</div>
+
+		<div>
+			Квадратична Евклідова:
+			<div class="inputs">
+				<input id="epsE" type="number" value="" readonly="1" />
 			</div>
 		</div>
 
