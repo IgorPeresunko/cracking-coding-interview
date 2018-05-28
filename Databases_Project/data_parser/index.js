@@ -70,7 +70,7 @@ const checkValues = _obj => {
 	const obj = {..._obj}
 	Object.keys(obj).forEach(key => {
 		if (typeof obj[key] === 'string') {
-			obj[key] = obj[key].replace(/[/|"]/g, '')
+			obj[key] = obj[key].replace(/"/g, '\'')
 		}
 	})
 	return obj

@@ -52,3 +52,18 @@ CREATE TABLE IF NOT EXISTS match_team (
 	FOREIGN KEY (match_id) REFERENCES matches (id),
 	PRIMARY KEY (team_id, match_id)
 );
+
+SELECT
+	radiant.id AS radiant_id,
+	dire.id AS dire_id,
+	radiant.team_name AS radiant,
+	dire.team_name AS dire,
+	matches.duration,
+	matches.radiant_score,
+	matches.dire_score,
+	matches.radiant_win,
+	leagues.league_name
+FROM matches
+JOIN teams AS radiant ON radiant.id = matches.radiant_team_id
+JOIN teams AS dire ON dire.id = matches.dire_team_id
+JOIN leagues ON leagues.id = matches.league_id;

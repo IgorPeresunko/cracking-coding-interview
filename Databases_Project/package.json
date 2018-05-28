@@ -5,6 +5,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "mysql": "^2.15.0"
   }
 }
