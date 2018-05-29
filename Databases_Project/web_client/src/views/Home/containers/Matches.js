@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { getMatches } from '../../../api/matches'
 
-import Content from '../components/Content'
+import Content from '../components/MatchSection'
 
 export default class Matches extends Component {
 
@@ -10,11 +10,11 @@ export default class Matches extends Component {
 
 		this.state = {
 			items: [],
-			limit: 10,
+			limit: 5,
 			loading: true
 		}
 		this.controls = {
-			onMore: this.onMore
+			onMore: this.onLoadMore
 		}
 	}
 
@@ -24,10 +24,10 @@ export default class Matches extends Component {
 		this.setState({ loading: false, items: matches })
 	}
 
-	onMore = () => {
-		this.setState({ limit: this.state.limit + 10 })
+	onLoadMore = () => {
+		this.setState({ limit: this.state.limit + 5, loading: true })
 
-		this.queryMatches(this.state.limit + 10)
+		this.queryMatches(this.state.limit + 5)
 	}
 
 	componentDidMount = () => {

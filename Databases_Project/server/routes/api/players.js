@@ -2,24 +2,22 @@ import { Router } from 'express'
 
 const router = Router()
 
-router.get('/', async (req, res, next) => {
-	req.mysql.query(`SELECT * FROM players`, (err, result) => {
+router.get('/:id', async (req, res, next) => {
+
+	const sql = `
+		SELECT
+			players.id,
+			players.nickname,
+			players.avatar
+		FROM teams
+		JOIN players ON players.team_id = teams.id
+		WHERE teams.id = ${req.params.id};
+	`
+
+	req.mysql.query(sql, (err, result) => {
 		
 		res.json(result)
 	})
 })
-
-router.post('/', async (req, res, next) => {
-	
-})
-
-router.put('/', async (req, res, next) => {
-	
-})
-
-router.delete('/', async (req, res, next) => {
-	
-})
-
 
 export default router

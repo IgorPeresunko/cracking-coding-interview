@@ -1,20 +1,19 @@
 import { injectGlobal } from 'styled-components'
 
 injectGlobal`
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro:400,700&subset=cyrillic');
-
 	body {
 		margin: 0;
+		font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 	}
 `
 
 export default {
-	primary: '#ccc',
+	primary: '#2196f3',
 	secondary: '',
 
 	radius: '',
 	buttonShadow: '',
 
-	mainFont: `'Open Sans', sans-serif`,
+	mainFont: `"Roboto", "Helvetica", "Arial", sans-serif`,
 	titleFont: `'Source Sans Pro', sans-serif`,
 }

@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 `
 const MatchesList = ({ items }) => (
 	<Wrapper>{
-		items.map(item => <MatchItem key={item.duration} item={item} />)
+		items.map(item => <MatchItem key={item.id} item={item} />)
 	}</Wrapper>
 )
 

@@ -1,21 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import Matches from './containers/Matches'
-import Logo from './components/Logo';
+import Heroes from './containers/Heroes'
+import Teams from './containers/Teams'
+import About from '../../components/About'
 
 
-const Home = ({ history }) => (
-	<Page>
-		
-		<Logo />
+const Home = () => (
+	<div>
+		<About />
 		<Matches />
-		
-	</Page>
+		<Heroes />
+		<Teams />
+	</div>
 )
-
-const Page = styled.div`
-	min-height: 100vh;
-`
 
 export default Home

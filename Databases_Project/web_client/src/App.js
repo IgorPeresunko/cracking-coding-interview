@@ -4,11 +4,15 @@ import { BrowserRouter } from 'react-router-dom'
 
 import theme from './themes/default'
 import Routes from './routes'
+import Header from './components/Header'
 
 const App = () => (
 	<ThemeProvider theme={theme}>
 		<BrowserRouter>
-			<Routes />
+			<React.Fragment>
+				<Header />
+				<Routes />
+			</React.Fragment>
 		</BrowserRouter>
 	</ThemeProvider>
 )

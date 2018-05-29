@@ -2,12 +2,17 @@
 export const getPlayers = async () => {
 	const res = await fetch(`/api/players`, {
 		method: "GET",
-	}).then(res => res.json())
+	})
+	const players = await res.json()
 
-	if (res.success) {
-		return res.videos
-	} else {
-		alert('Error. Try to refresh')
-		return []
-	}
+	return players
+}
+
+export const getPlayersByTeam = async id => {
+	const res = await fetch(`/api/players/${id}`, {
+		method: "GET",
+	})
+	const players = await res.json()
+
+	return players
 }
