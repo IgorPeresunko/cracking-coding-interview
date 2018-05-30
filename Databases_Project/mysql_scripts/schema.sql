@@ -52,3 +52,24 @@ CREATE TABLE IF NOT EXISTS match_team (
 	FOREIGN KEY (match_id) REFERENCES matches (id),
 	PRIMARY KEY (team_id, match_id)
 );
+
+DELIMITER |
+
+CREATE TRIGGER matches_after_insert 
+AFTER INSERT
+	ON matches FOR EACH ROW
+BEGIN
+    INSERT INTO match_team VALUES (NEW.radiant_team_id, NEW.id);
+	INSERT INTO match_team VALUES (NEW.dire_team_id, NEW.id);
+END;
+|
+
+CREATE TRIGGER matches_before_delete
+BEFORE DELETE
+	ON matches FOR EACH ROW
+BEGIN
+    DELETE FROM match_team WHERE match_id = OLD.id;
+END;
+|
+
+DELIMITER ;

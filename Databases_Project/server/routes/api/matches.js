@@ -99,9 +99,8 @@ router.delete('/:id', async (req, res, next) => {
 		WHERE id = "${req.params.id}"
 	`
 	
-	req.mysql.query(`DELETE FROM match_team WHERE match_id = "${req.params.id}"`, err =>
-		req.mysql.query(sql, err =>
-			res.json({ success: true })))
+	req.mysql.query(sql, err =>
+		res.json({ success: true }))
 })
 
 
