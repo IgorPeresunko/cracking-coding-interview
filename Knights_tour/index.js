@@ -47,7 +47,7 @@ class Box {
 		this.positionJ = positionJ
 		this.listMoves = new Array()
 		this.moves = 0
-		
+
 		if (positionI - 2 >= 0 && positionJ - 1 >= 0) {
 			this.listMoves.push(new ChessPosition(positionI - 2, positionJ - 1))
 			this.moves++

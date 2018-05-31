@@ -59,7 +59,7 @@ CREATE TRIGGER matches_after_insert
 AFTER INSERT
 	ON matches FOR EACH ROW
 BEGIN
-    INSERT INTO match_team VALUES (NEW.radiant_team_id, NEW.id);
+	INSERT INTO match_team VALUES (NEW.radiant_team_id, NEW.id);
 	INSERT INTO match_team VALUES (NEW.dire_team_id, NEW.id);
 END;
 |
@@ -71,5 +71,26 @@ BEGIN
     DELETE FROM match_team WHERE match_id = OLD.id;
 END;
 |
+
+DELIMITER //
+
+CREATE PROCEDURE getTeamPlayers(IN team_id INT)
+BEGIN
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+	BEGIN
+		ROLLBACK;
+	END;
+
+	START TRANSACTION;
+    	SELECT
+			players.id,
+			players.nickname,
+			players.avatar
+		FROM teams
+		JOIN players ON players.team_id = teams.id
+		WHERE teams.id = team_id;
+	COMMIT;
+
+END //
 
 DELIMITER ;

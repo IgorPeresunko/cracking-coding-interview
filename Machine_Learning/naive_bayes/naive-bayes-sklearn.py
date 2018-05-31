@@ -42,3 +42,5 @@ plt.legend(loc='best', shadow=False, scatterpoints=1)
 plt.title('Naive Bayes Classification & Prediction')
 
 # plt.show()
+# Он выбирает тот клас для которого максимальная вероятность
+# признаков при условии этого класса домноженная на априорную вероятность этого класса
