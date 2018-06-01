@@ -5,7 +5,7 @@ import Matches from '../Home/containers/Matches'
 
 const Match = ({ history }) => (
 	<div>
-		<MatchContainer path={history.location.pathname}/>
+		<MatchContainer path={history.location.pathname} push={history.push} />
 		<Matches />
 	</div>
 )
